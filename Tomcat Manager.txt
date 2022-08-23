@@ -1,0 +1,30 @@
+herramienta de adminitracion y monitorizacion.
+- manager app (por defecto esta protegida)
+- localhost:8080/manager/html
+
+# conf/tomcat-user.xml para crear usuarios y configurar sus roles (manager-gui)
+
+Tomcat manager desde comandos:
+
+- localhost:8080/manager/text
+# configurar sus roles (manager-script)
+- localhost:8080/manager/text/list
+- localhost:8080/manager/text/serverinfo
+- localhost:8080/manager/text/mvinfo
+
+parar en modo comando
+- localhost:8080/manager/text/stop?path=/app1
+
+iniciar en modo comando
+- localhost:8080/manager/text/start?path=/app1
+
+recargar en modo comando
+- localhost:8080/manager/text/reload?path=/app1
+
+eliminar en modo comando
+- localhost:8080/manager/text/undeploy?path=/app1
+
+
+
+
+

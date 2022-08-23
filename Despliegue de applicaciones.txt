@@ -1,0 +1,58 @@
+Servlet: son clases java, programas hechos en java. permite crear aplicaciones java independientes de la plataforma 
+- se ejecutan dentro de un servidor de aplicacciones
+- usa request/response
+- los Servlet se declaran en web.xml 
+
+JSP: hibrido que permite usar HTML,CSS,librerias,ect 
+- web dinamicas
+- mas sencillo
+- se compila y se convierte en servlet
+
+#importante
+- WEB-INF: recursos de la applicacion como por ejemplo web.xml
+- META-INF: contiene el manifest y los ficheros de contexto 
+
+#importante
+- ficheros con extension
+- .War: app tipo web (muy usado en tomcat) 
+- .jar: archivo de tipo libreria (clases o programas)
+- .EAR: enterprise archive 
+
+despliegue WAR
+- tomcatdirectorio/webapps
+- añadir la app (ejemplo.war)
+- localhost:8080/ejemplo (el nombre del contexto que sera el directorio creado por el .war por defecto)
+
+# despliega autoaticamente al añadir un .war en webapps por que en server.xml (conf) esta activo autodeploy
+# en produccion suele estar desactivado para evitar problemas 
+
+Desplegar mediante un directorio 
+- cp -r web1 /home/descargas/tomcat/webapps
+
+ReDeploy:
+- fuenteWAR (modificar html,jsp)
+- jar cvf ejemplo.war * 
+- cp ejemplo.war /home/descargas/tomcat/webapps
+
+eliminar una app:
+- rm -rf web1
+- rm ejemplo.war (elimina tambien el directorio al hacerlo)
+
+Desplegar una app desde eclipse:
+- importar ejemplo practicaServlet
+- open perspective java EE 
+# exportar como war
+
+contextos:
+- esta asociado a una app
+- por defecto usara uno asociado al host (tomcat.conf)
+- se puede cambiar el contexto desde xml
+- <Context docBase="/home/tomcat/aplis" path="/eje-context" reloadble="true" /> (dentro de host)
+
+desplegar desde tomcat manager
+- seleccionar el war 
+
+desplegar en modo manager text
+- localhost:8080/manager/text/deploy/war=file:/home/descargas/app.war&path=/app1 (path es contexto)(sin path lo hace por defecto)
+
+

@@ -1,0 +1,62 @@
+tomcat:
+
+Java EE: Java Enterprise edition.
+- https://www.oracle.com/es/java/technologies/java-ee-glance.html
+especificacion o filosofia de trabajo de Java que ha de cumplir una serie de especificaciones.
+
+para que un servidor de aplicaciones sea compatible con Java EE debe tener:
+- capa web y capa negocio:(ttml,php,css,javaScript,ect)(enterpriseBin,persistencia de datos)
+- modelo de negocio para empresas grandes 
+
+Tomcat:
+- esta orientado a la capa web de JavaEE
+
+Similares a Tomcat: Oracle weblogic,IBMwebSphere,ret hat jboss,ect
+
+Instalar Tomcat:
+
+- https://www.oracle.com/es/java/technologies/java-ee-glance.html
+- tar xvf fichero.gz
+- ponerlo en el path .bashrc 
+
+
+Uso de tomcat:
+
+- ./startup.sh (arranca)
+- localhost:8080
+
+# tomcat arranca una maquina viertual java
+
+fichero de configuracion de tomcat:
+- server.xml (conf global)
+
+fichero catalina propiedades
+- catalina.propierties
+
+
+
+Arrancar tomcat: catalina.sh
+
+comandos: 
+-catalina.sh version
+- catalina.sh
+- ps -ef | grep java (muestra solo los procesos java)
+- catalina.sh start / run 
+
+# forma poco segura
+- puerto shutdown: 8005 shutdown
+- cambiar el puerto po "-1" o cambiar shutdown por algo que no sea intuitivo 
+
+# cambiar propiedades 
+- CATALINA_OPTS
+
+Conectores: componentes para acceder desde cliente a tomcat
+- puedes cambiar el puerto por el que se accede a tomcat 
+
+Integrar tomcat con eclipse: 
+- es similar en otros entornos 
+- windows/show view/server
+- create new/apache tomcat v9 server/tomcat prime/home/descargas/tomcat/tomcat/
+- seleccionar app 
+- server location: use tomcat installation
+

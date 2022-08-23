@@ -1,0 +1,28 @@
+valves:
+
+- permite interceptar una llamada o mas a aplicaciones web
+- similares a los filtros servlets
+- propio de tomcat
+- permite implementar seguridad 
+- compresion de contenido
+- tienen buen rendimiento
+
+configurar valves:
+
+- server.xml (dentro de host esta valve) 
+- es una clase java
+- genera unos logs
+- https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Access_Log_Valve
+
+remoteaddrValve: permite impedir el acceso de determinadas ips al servicio
+
+- https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Address_Valve
+
+
+crear una valve:
+
+- new utility project (libreria)
+- export .jar y clase java
+- tomcat/lib/valvula.jar (o en el directorio que se desee dentro de tomcat path)
+- <Valve ClassName="curso,EjemploValve"/> (el nombre de la clase java)
+

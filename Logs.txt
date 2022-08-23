@@ -1,0 +1,26 @@
+Logging: 
+
+- utiliza java logging API
+- usa java.util.logging
+- tomcat dispone de sus propia implementacion conocida como JULI
+- se puede configurar globalmente (logging.properties)o en WEB-INF/logging.properties
+
+handler: manejador de los log
+- java.util.logging.Handler
+- fileHandler: escribe a un fichero
+- consolehandler:genera mensajes a system.err
+- sockethandler: escribe mensajes a network socket
+- asyncfilehandler: implementa una cola de log entries
+
+formatter: cada handler tiene un formatter 
+- simpleformatter:mensaje,fecha,hora,descripcion,ect
+- XMLformatter: lo da en xml
+- onlineformatter: en una sola linea, como el simple
+- jdkLoggerFormatter: formato compacto de Timestamp
+
+fichero loggin.properities
+- tomcat/conf
+- handler: a donde se llevan las log entries
+
+
+
