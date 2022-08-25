@@ -1,0 +1,12 @@
+<Context path="/jdbc" >
+                    <Resource name="jdbc/cursoDB"
+                        auth="Container"
+                        type="javax.sql.DataSource"
+                        username="desa"
+                        password="desa"
+                        driverClassName="org.mariadb.jdbc.Driver"
+                        url="jdbc:mariadb://localhost:3306/seguridad"
+                        initialSize="4"
+                        maxActive="15"
+                        maxIdle="3"/>
+          </Context>

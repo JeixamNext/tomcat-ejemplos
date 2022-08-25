@@ -1,0 +1,52 @@
+JDBC: permite conectarse a BBDD
+
+Descarga de utilidad Psi-Probe:
+
+- probe: consola de tomcat para gestionar y controlar un entorno tomcat
+- https://github.com/psi-probe/psi-probe
+- cp probe.war /home/descargas/tomcat/webapps 
+
+uso probe:
+
+- localhost:8080/probe
+- usuario/pass= el del manager-gui
+
+#######################################################################
+Uso de mariadb
+
+- mysql -u root -p 
+- create database seguridad; 
+- use seguridad
+- creare table user (nombre varchar(50))
+- insert into user value ("pepe");
+- commit;
+- select * from user
+- create user 'desa'@'localhost' identified by 'desa';
+- grant all on seguridad.* to 'desa'@'localhost';
+#######################################################################
+
+Driver JDBC:
+
+- https://mariadb.com/kb/en/about-mariadb-connector-j/
+- cp mariadb-java-cliente-x.x.x.jar /tomcat/lib (directorio lib de tomcat)
+- catalina.sh stop/start
+
+
+Configurar la conexion JDBC
+
+- <Context path="/jdbc" >
+                    <Resource name="jdbc/cursoDB"
+                        auth="Container"
+                        type="javax.sql.DataSource"
+                        username="XXXX"
+                        password="XXXX"
+                        driverClassName="org.mariadb.jdbc.Driver"
+                        url="jdbc:mariadb://localhost:3306/seguridad"
+                        initialSize="4"
+                        maxActive="15"
+                        maxIdle="3"/>
+          </Context>
+
+- Dentro de server (globalNameResource) en tomcat/conf
+- catalina.sh stop/start
+
