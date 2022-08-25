@@ -1,0 +1,13 @@
+Realm: proteger recursos web
+
+- Se crean en hosts dentro de server.xml
+- http://www.jtech.ua.es/ayto/ayto2008/servd-web/sesion05-apuntes.pdf
+- lockOutRealm: impide la fuerza bruta 
+
+definir la seguridad:
+
+- web.xml
+- security constraint
+- se definen roles
+- se definen los login
+
