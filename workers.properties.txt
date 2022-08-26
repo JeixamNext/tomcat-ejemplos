@@ -1,0 +1,23 @@
+# Lista de Workers
+worker.list=jkstatus, MisTomcat
+
+# Activar los workers
+worker.jkstatus.type=status
+worker.MisTomcat.type=lb
+
+# Añadir instancias como workers, 3 en este caso
+
+worker.worker1.type=ajp13
+worker.worker1.host=localhost
+worker.worker1.port=8009
+
+worker.worker2.type=ajp13
+worker.worker2.host=localhost
+worker.worker2.port=9010
+
+worker.worker3.type=ajp13
+worker.worker3.host=localhost
+worker.worker3.port=10011
+
+# Workers en el Load Balancer
+worker.MisTomcat.balance_workers=worker1,worker2,worker3

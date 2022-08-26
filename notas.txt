@@ -60,3 +60,27 @@ Integrar tomcat con eclipse:
 - seleccionar app 
 - server location: use tomcat installation
 
+Conectar apache web server con Tomcat
+
+- se necesita el componente tomcat connector
+- systemctl status httpd
+- systemctl start httpd
+- instalar: mod_jk (https://tomcat.apache.org/download-connectors.cgi)
+Compilar el mod_jk
+- su root
+- yum install httpd-devel apr apr-devel apr-util-devel gcc make libtool (para poder compilar)
+- which apxs (indica si esta instalado apks)
+- tar xvf tomcatconector.gz
+- cd native 
+- ./configure --with-apxs=(which apxs: la direccion)(paso1)
+- make (paso2)(compilar)
+- cd apache-2.0
+- mod_jk.so
+- cp mod_jk.so /ect/httpd/modules
+configurar apache
+- ect/httpd/conf/httpd.conf
+(incluir al final tras conf.d/*.conf lo que hay en configracion-apache)
+- configurar worker.properties (nano worker.properties y copiar workers.properties)
+- server.xml (tomcat) descomentar connector ajp
+
+

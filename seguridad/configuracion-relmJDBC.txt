@@ -1,0 +1,11 @@
+<Realm className="org.apache.catalina.realm.JDBCRealm"
+                   driverName="org.mariadb.jdbc.Driver"
+                   connectionName="desa"
+                   connectionPassword="desa"
+                   connectionURL="jdbc:mariadb://localhost/seguridad"
+                   userTable="users"
+                   userNameCol="user_name"
+                   userCredCol="user_pass"
+                   userRoleTable="users_roles"
+                   roleNameCol="role_name"
+                   />

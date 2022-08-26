@@ -1,0 +1,19 @@
+    # Cargamos el modulo
+	LoadModule jk_module modules/mod_jk.so
+		
+	# Indicamos dinde esta el fichero workers.properties
+	JkWorkersFile conf/workers.properties
+	
+	# Podemos generar ficheros de log
+	JkShmFile  logs/mod_jk.shm
+	JkLogFile  logs/mod_jk.log
+	
+	JkLogLevel info
+	
+	# Con esto podemos monitorizar jkstatus
+	JkMount /jkmanager/* jkstatus
+	<Location /jkmanager/>		
+	</Location>
+	
+	# Mapeamos las URL contra un conjunto de workers
+	JkMount  /* MisTomcat

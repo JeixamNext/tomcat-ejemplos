@@ -1,5 +1,7 @@
 Realm: proteger recursos web
 
+https://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html
+
 - Se crean en hosts dentro de server.xml
 - http://www.jtech.ua.es/ayto/ayto2008/servd-web/sesion05-apuntes.pdf
 - lockOutRealm: impide la fuerza bruta 
